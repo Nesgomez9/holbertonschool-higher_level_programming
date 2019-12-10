@@ -5,7 +5,7 @@ if number > 0:
     n = number % 10
 else:
     n = number % -10
-print("Last digit of {} is {}".format(number, n), end = '')
+print("Last digit of {} is {}".format(number, n), end='')
 if n == 0:
     print(" and is 0")
 elif n > 5:
