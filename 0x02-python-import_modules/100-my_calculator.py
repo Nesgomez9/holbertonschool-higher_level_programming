@@ -6,12 +6,12 @@ if __name__ == "__main__":
     argc = len(argv) - 1
     operators = ["+", "-", "*", "/"]
     func = [add, sub, mul, div]
-    a = int(argv[1])
-    b = int(argv[3])
 
     if argc != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
+    a = int(argv[1])
+    b = int(argv[3])
     for i, operator in enumerate(operators):
         if argv[2] == operator:
             print("{} {} {} = {}".format(a, operator, b, func[i](a, b)))
