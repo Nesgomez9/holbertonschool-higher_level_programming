@@ -4,7 +4,7 @@ if __name__ == "__main__":
     from sys import argv
 
     argc = len(argv) - 1
-    operators = ["+", "-", "*", "/"]
+    operators = ["+", "-", "*", "/", None]
     func = [add, sub, mul, div]
 
     if argc != 3:
@@ -14,7 +14,9 @@ if __name__ == "__main__":
     b = int(argv[3])
     for i, operator in enumerate(operators):
         if argv[2] == operator:
-            print("{} {} {} = {}".format(a, operator, b, func[i](a, b)))
-            exit(0)
-    print("Unknown operator. Available operators: +, -, * and / ")
-    exit(1)
+            break
+    if operator:
+        print("{} {} {} = {}".format(a, operator, b, func[i](a, b)))
+    else:
+        print("Unknown operator. Available operators: +, -, * and / ")
+        exit(1)
