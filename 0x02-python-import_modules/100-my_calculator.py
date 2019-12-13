@@ -16,7 +16,7 @@ if __name__ == "__main__":
         if argv[2] == operator:
             break
     if operator:
-        print("{} {} {} = {}".format(a, operator, b, func[i](a, b)))
+        print("{:d} {} {:d} = {:d}".format(a, operator, b, func[i](a, b)))
     else:
-        print("Unknown operator. Available operators: +, -, * and / ")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
