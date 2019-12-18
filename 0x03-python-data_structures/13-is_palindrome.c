@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
 /**
  * is_palindrome - check the code for Holberton School students.
  *
