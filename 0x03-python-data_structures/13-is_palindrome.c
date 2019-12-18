@@ -36,7 +36,7 @@ int is_palindrome(listint_t **head)
 	tmp1 = *head;
 	count = 0;
 	size = size1 = list_len(tmp1);
-	while (count < size1 / 2)
+	while (tmp1 != tmp2)
 	{
 		tmp2 = *head;
 		i =  0;
