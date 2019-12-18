@@ -27,7 +27,7 @@ int list_len(const listint_t *h)
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp1, *tmp2;
-	int i, j, size, start, count;
+	int i, j, size, size1, start, count;
 
 	if (!head)
 		return (0);
@@ -35,8 +35,8 @@ int is_palindrome(listint_t **head)
 		return (1);
 	tmp1 = *head;
 	start = count = 0;
-	size = list_len(tmp1);
-	while (count <= size / 2)
+	size = size1 = list_len(tmp1);
+	while (count < size1 / 2)
 	{
 		tmp1 = *head;
 		tmp2 = *head;
