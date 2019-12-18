@@ -29,6 +29,8 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp1, *tmp2;
 	int i, j, size, start, count;
 
+	if (!head)
+		return (0);
 	if (!*head)
 		return (1);
 	tmp1 = *head;
