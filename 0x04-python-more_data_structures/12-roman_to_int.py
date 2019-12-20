@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if type(roman_string) != str and not roman_string:
+        return 0
     suma = a = 0
     roman_list = []
     for count in roman_string:
