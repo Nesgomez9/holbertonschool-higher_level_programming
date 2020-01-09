@@ -1,6 +1,4 @@
 import sys
-
-
 def safe_function(fct, *args):
     try:
         res = fct(*args)
