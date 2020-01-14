@@ -1,0 +1,259 @@
+=================================
+Doctests for add_integer function
+=================================
+
+
+``def add_integer(a, b=98)``
+
+This function adds (+) two inputs (a and b),
+his inputs should be int or float type, otherwise
+this function will raise a TypeError with his respective message,
+if not problem is found it will returns an int type result.
+Remember that if b doesn't explicit assignedit will take a value of "98"
+
+
+To see how it works let's import the function from his module first:
+====================================================================
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+And now we check cases where it works:
+======================================
+
+- Integers
+
+    >>> add_integer(3, 7)
+    10
+
+    >>> add_integer(-3, 9)
+    6
+
+    >>> add_integer(-67, 10)
+    -57
+
+    >>> add_integer(-12, -8)
+    -20
+
+    >>> add_integer(-98)
+    0
+
+- Floats
+
+    >>> add_integer(3.0, 7.0)
+    10
+
+    >>> add_integer(-3.5, 9.5)
+    6
+
+    >>> add_integer(-67.9, 10.1)
+    -57
+
+    >>> add_integer(-12.0, -8)
+    -20
+
+    >>> add_integer(-98.3)
+    0
+
+
+Now let's check the edge cases:
+===============================
+
+
+Type errors
+===========
+
+- Strings
+
+    >>> add_integer("56")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, "hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer("hi", -5.0)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+- Lists
+
+    >>> add_integer([28, 6])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, [10])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer([3], 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+- Dictionaries
+
+    >>> add_integer({"Key1": 28, "Key2": 6})
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, {"key": 10})
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer({"Key": 3}, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+- Tuples
+
+    >>> add_integer((28, 6))
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, (10,))
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer((3,), 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+- Sets
+
+    >>> add_integer({28, 6})
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, {10})
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer({3}, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+- Complex Integers
+
+    >>> add_integer(3j)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, 10j)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer(3j, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+- None
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer(None, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+- Boolean
+
+    >>> add_integer(True)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(45, False)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer(True, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+
+Cast Errors
+===========
+
+- "Inf" float built-in
+
+    >>> add_integer(float("inf"))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(45, float("inf"))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float("inf"), 6)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float("inf"), float("inf"))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+- "nan" float built-in
+
+    >>> add_integer(float("nan"))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(45, float("nan"))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(float("nan"), 6)
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(float("nan"), float("nan"))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+
+Empty input
+===========
+
+ - No given parameters
+
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'

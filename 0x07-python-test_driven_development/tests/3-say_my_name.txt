@@ -1,0 +1,27 @@
+=================================
+Doctests for matrix_divided function
+=================================
+
+Import Function
+===============
+
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Strings
+=======
+
+    >>> say_my_name("Nicolas", "Gomez")
+    My name is Nicolas Gomez
+
+    >>> say_my_name(' H ', 'A')
+    My name is  H  A
+
+    >>> say_my_name(2, "Verga")
+    Traceback (most recent call last):
+              ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(['J', 'o', 'h', 'n'], "Conor")
+    Traceback (most recent call last):
+              ...
+    TypeError: first_name must be a string
