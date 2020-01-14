@@ -1,0 +1,35 @@
+=================================
+Doctests for add_integer function
+=================================
+
+    >>> matrix_mul  = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+
+Now proper functioning:
+
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+    [15 22]]
+
+    >>> print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13 16]]
+
+
+Now Errors:
+
+    >>> try:
+    ...	print(matrix_mul(None, None))
+    ... except Exception as te:
+    ...        print(te)
+    Object arrays are not currently supported
+
+    >>> try:
+    ...	print(matrix_mul([[1, 2, 3]], ))
+    ... except Exception as te:
+    ...	print(te)
+    lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> try:
+    ...	print(matrix_mul())
+    ... except Exception as te:
+    ...	print(te)
+    lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
