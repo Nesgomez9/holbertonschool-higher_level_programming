@@ -24,7 +24,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     @property
     def width(self):
         """ return width"""
@@ -66,7 +65,6 @@ class Rectangle:
         """ Bye rectangle """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
