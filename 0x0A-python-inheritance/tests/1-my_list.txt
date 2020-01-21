@@ -1,0 +1,23 @@
+====================================
+ Doctest for MyList class
+====================================
+
+Import function
+=================
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Creating the list
+
+	 >>> list1 = MyList()
+
+	 >>> type(list1) == MyList
+   	 True
+
+    	 >>> isinstance(list1, list)
+    	 True
+
+	 >>> list1 = list(range(12, -12, -2))
+
+	 >>> MyList.print_sorted(a_list)
+	 [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12]
