@@ -14,7 +14,7 @@ class Square(Rectangle):
         self.__size = size
         super().__init__(size, size)
 
-def __str__(self):
+    def __str__(self):
         """ Method for print """
         string = "[Square] {:d}/{:d}".format(self.__size, self.__size)
         return string

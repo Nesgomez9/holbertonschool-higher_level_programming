@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class MyList(list):
     """ Subclass of list class """
     def print_sorted(self):
