@@ -4,9 +4,11 @@ import json
 
 """Module Base for REctangle and Square"""
 
+
 class Base:
     """Base Clase"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """ Constructor"""
         if id:

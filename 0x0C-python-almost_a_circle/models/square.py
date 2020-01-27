@@ -7,7 +7,7 @@ class Square(Rectangle):
     """ Square Class that defines a Square"""
     def __init__(self, size, x=0, y=0, id=None):
         """Constructor"""
-        super().__init__(size,size,x,y,id)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
@@ -28,7 +28,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Method that update an attribute of the object Square"""
         count = 0
-        attr = ["id","size", "x", "y"]
+        attr = ["id", "size", "x", "y"]
 
         for arg in args:
             if not count:

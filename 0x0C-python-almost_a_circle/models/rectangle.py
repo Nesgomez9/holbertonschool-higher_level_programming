@@ -1,5 +1,5 @@
 #!/usr/bin/python3
- """ Module with the Rectangle Class"""
+""" Module with the Rectangle Class"""
 from models.base import Base
 
 
@@ -15,7 +15,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-         """ Getter of the width attribute """
+        """ Getter of the width attribute """
         return self.__width
 
     @width.setter
@@ -89,7 +89,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ Method Updates that updates an attribute of a Rectangle """
         count = 0
-        attr = ["id","width", "height", "x", "y"]
+        attr = ["id", "width", "height", "x", "y"]
 
         for arg in args:
             if not count:
@@ -108,5 +108,5 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ Returns dictionary representation of a Rectangle """
         dic = {"id": self.id, "width": self.width, "height": self.height,
-                  "x": self.x, "y": self.y}
+               "x": self.x, "y": self.y}
         return dic
