@@ -48,7 +48,7 @@ class Base:
         """returns a new instance with the attributes that are defines
         the dictionary """
         if cls.__name__ == "Rectangle":
-            dummy = cls(10,10)
+            dummy = cls(10, 10)
         elif cls.__name__ == "Square":
             dummy = cls(10)
         dummy.update(**dictionary)
