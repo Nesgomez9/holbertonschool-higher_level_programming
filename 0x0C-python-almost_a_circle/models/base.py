@@ -67,3 +67,34 @@ class Base:
                 return list1
         except IOError:
             return []
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serializes"""
+        with open("%s.csv" % cls.__name__, 'w', newline='') as cf:
+            wr = csv.writer(cf)
+            if cls.__name__ is "Square":
+                for i in list_objs:
+                    wr.writerow([i.id, i.size, i.x, i.y])
+            elif cls.__name__ is "Rectangle":
+                for i in list_objs:
+                    wr.writerow([i.id, i.width, i.height, i.x, i.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserializes"""
+        rlist = []
+        try:
+            with open("%s.csv" % cls.__name__, 'r') as cf:
+                rd = csv.reader(cf)
+                for i in rd:
+                    if cls.__name__ is "Square":
+                        dic1 = {"id": int(i[0]), "size": int(i[1]),
+                                "x": int(i[2]), "y": int(i[3])}
+                    elif cls.__name__ is "Rectangle":
+                        dic1 = {"id": int(i[0]), "width": int(i[1]),
+                                "height": int(i[2]), "x": int(i[3]),
+                                "y": int(i[4])}
+                    rlist.append(cls.create(**dic1))
+            return rlist
+        except:
+            return []
