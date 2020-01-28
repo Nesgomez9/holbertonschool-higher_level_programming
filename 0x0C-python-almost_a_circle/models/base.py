@@ -3,6 +3,7 @@
 import json
 import csv
 
+
 class Base:
 
     """Base Clase"""
@@ -67,6 +68,7 @@ class Base:
                 return list1
         except IOError:
             return []
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Serializes"""
