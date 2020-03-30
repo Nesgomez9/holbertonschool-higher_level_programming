@@ -14,6 +14,7 @@ if __name__ == "__main__":
     query = """
     SELECT * FROM states
     WHERE name like '{:s}'
+    COLLATE latin1_general_cs
     ORDER BY id ASC;""".format(argv[4])
     cur.execute(query)
     rows = cur.fetchall()
