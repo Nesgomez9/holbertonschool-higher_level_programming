@@ -5,10 +5,9 @@ function factorial (a) {
   }
   return (a * factorial(a - 1));
 }
-const num = parseInt(procces.argv[2]);
-if (!isNaN(num)) {
-  const res = factorial(parseInt(process.argv[2]));
-  console.log(res);
+if (parseInt(process.argv[2])) {
+  const result = factorial(parseInt(process.argv[2]));
+  console.log(result);
 } else {
   console.log(1);
 }
