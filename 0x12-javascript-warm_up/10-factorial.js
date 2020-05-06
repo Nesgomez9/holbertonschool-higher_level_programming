@@ -7,7 +7,8 @@ function factorial (a) {
 }
 const num = parseInt(procces.argv[2]);
 if (!isNaN(num)) {
-  console.log(factorial(num));
+  const res = factorial(parseInt(process.argv[2]));
+  console.log(res);
 } else {
   console.log(1);
 }
